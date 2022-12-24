@@ -43,6 +43,11 @@ namespace GrimmchildAnywhere
             {
                 self.ChangeFsmTransition("Dream?", "FINISHED", "Charms Allowed?");
             }
+            else if (self.gameObject.name == "Grimm Scene" && self.Fsm.Name == "Initial Scene")
+            {
+                self.ChangeFsmTransition("Absorb Start", "FINISHED", "Absorb End");
+                self.ChangeFsmTransition("Absorb Start 2", "FINISHED", "Absorb End 2");
+            }
         }
     }
 }
